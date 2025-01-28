@@ -2,23 +2,24 @@ package com.campusdual.classroom;
 
 public class Teacher extends Person {
 
-	protected String area;
+    protected String area;
 
-	public Teacher(String name, String surname, String area) {
-		super(name, surname);
-		this.area = area;
-	}
+    public Teacher(String name, String surname, String area) {
+        super(name, surname);
+        this.area = area;
+    }
 
-	public String getArea() {
-		return this.area;
-	}
+    public String getArea() {
+        return this.area;
+    }
 
-	public void setArea(String area) {
-		this.area = area;
-	}
+    public void setArea(String area) {
+        this.area = area;
+    }
 
-	@Override
-	public void  getDetails() {
-		System.out.println("Profesor/a " + name + " " + surname + ", especialista en " + this.area.toLowerCase() );
-	}
+    @Override
+    public void getDetails() {
+        System.out.println("Profesor/a " + super.name + " " + super.surname +
+                ", especialista en " + this.area.toLowerCase());
+    }
 }

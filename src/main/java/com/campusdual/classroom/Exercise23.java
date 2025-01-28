@@ -6,7 +6,6 @@ import java.util.Map;
 public class Exercise23 {
 
     public static Map<String, Person> createHashMap() {
-
         Map<String, Person> map = new HashMap<>();
 
         map.put("person", new Person("John", "Smith"));
@@ -18,17 +17,13 @@ public class Exercise23 {
     }
 
     public static Person addMapValue(Map<String, Person> map, String key, Person value) {
-
         map.put(key, value);
-
-        return value;
+        return map.get(key);
     }
 
     public static void printMapValues(Map<String, Person> map) {
-
         for (String key : map.keySet()) {
             Person person = map.get(key);
-
             person.getDetails();
         }
     }
@@ -40,5 +35,5 @@ public class Exercise23 {
 
         printMapValues(map);
     }
-    
+
 }
